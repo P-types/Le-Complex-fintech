@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Complexx Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Le Complexx Budget Tracker</h1>
+        <p>Empowering students to manage their finances effectively.</p>
+        <img src="money-sticker.png" alt="Money Sticker" class="money-sticker">
+    </div>
+    
+    <div class="container">
+        <div class="tracker">
+            <h2>Budget Tracker</h2>
+            <input type="number" id="budget" placeholder="Enter your budget in Rupees">
+            <button onclick="addBudget()">Set Budget</button>
+            <p id="budgetOutput"></p>
+        </div>
+        
+        <div class="tracker">
+            <h2>Expense Splitter</h2>
+            <input type="number" id="totalExpense" placeholder="Enter total expense in Rupees">
+            <input type="number" id="numPeople" placeholder="Number of people to split">
+            <button onclick="splitExpense()">Split Expense</button>
+            <p id="expenseOutput"></p>
+            <img src="money-sticker.png" alt="Money Sticker" class="money-sticker">
+        </div>
+        
+        <div class="tracker">
+            <h2>Savings Tracker</h2>
+            <input type="number" id="income" placeholder="Enter your income in Rupees">
+            <input type="number" id="savings" placeholder="Enter your savings goal in Rupees">
+            <button onclick="trackSavings()">Track Savings</button>
+            <p id="savingsOutput"></p>
+            <img src="money-sticker.png" alt="Money Sticker" class="money-sticker">
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2024 Le Complexx. Designed for students by students.</p>
+        <img src="money-sticker.png" alt="Money Sticker" class="money-sticker">
+    </div>
+</body>
+</html>
