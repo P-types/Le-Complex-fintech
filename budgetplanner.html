@@ -47,13 +47,13 @@
     </div>
     <div id="result">
         <div class="card">
-        <p id="dailyexpense">Daily Expense: -</p>
+        <p id="dailyexpense">Daily Expense</p>
         </div>
         <div class="card">
-        <p id="totalsavings">Total Savings: -</p>
+        <p id="totalsavings">Total Savings</p>
         </div>
         <div class="card">
-        <p id="totalleisure">Total Leisure: -</p>
+        <p id="totalleisure">Total Leisure</p>
         </div>
 </div>
   </i>
@@ -62,16 +62,16 @@
        
     let de, ts, tl, i;
         function displayResults(dailyExpense, totalSavings, totalLeisure) {
-            document.getElementById("dailyexpense").innerHTML = "Daily Expense:  ₹" + dailyExpense.toFixed(2);
+            document.getElementById("dailyexpense").innerHTML = "Daily Expense   ₹" + dailyExpense.toFixed(2);
             if (totalSavings !== undefined) {
-                document.getElementById("totalsavings").innerHTML = "Total Savings:  ₹" + totalSavings.toFixed(2);
+                document.getElementById("totalsavings").innerHTML = "Total Savings   ₹" + totalSavings.toFixed(2);
             } else {
-                document.getElementById("totalsavings").innerHTML = "Total Savings: -";
+                document.getElementById("totalsavings").innerHTML = "Total Savings   -";
             }
             if (totalLeisure !== undefined) {
-                document.getElementById("totalleisure").innerHTML = "Total Leisure:  ₹" + totalLeisure.toFixed(2);
+                document.getElementById("totalleisure").innerHTML = "Total Leisure   ₹" + totalLeisure.toFixed(2);
             } else {
-                document.getElementById("totalleisure").innerHTML = "Total Leisure: -";
+                document.getElementById("totalleisure").innerHTML = "Total Leisure   -";
             }
         }
         function getIncome() {
