@@ -1,49 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+<body>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Complexx Budget Tracker</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <div class="header">
-        <h1>Le Complexx Budget Tracker</h1>
-        <p>Empowering students to manage their finances effectively.</p>
-        <img src="money-sticker.png" alt="Money Sticker" class="money-sticker">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <h1 class="glow">GALACTIC LEDGER</h1>
+    <H2 class="second">by Le Complex</H2><hr>
+    <h3 style="color:#c7c2c2; text-align: center;">Your ultimate tool for finance management <br>
+    </h3>
+    <div class="card">
+    <button type="button" onclick="location.href='budgetplanner.html'">
+        <i class="fa-solid fa-wallet"></i>
+        <b>Budget Manager</b></button>
+    <p>Enter your budget and get a bifurcation for saving and spending your money </p>
     </div>
-    
-    <div class="container">
-        <div class="tracker">
-            <h2>Budget Tracker</h2>
-            <input type="number" id="budget" placeholder="Enter your budget in Rupees">
-            <button onclick="addBudget()">Set Budget</button>
-            <p id="budgetOutput"></p>
-        </div>
-        
-        <div class="tracker">
-            <h2>Expense Splitter</h2>
-            <input type="number" id="totalExpense" placeholder="Enter total expense in Rupees">
-            <input type="number" id="numPeople" placeholder="Number of people to split">
-            <button onclick="splitExpense()">Split Expense</button>
-            <p id="expenseOutput"></p>
-            <img src="money-sticker.png" alt="Money Sticker" class="money-sticker">
-        </div>
-        
-        <div class="tracker">
-            <h2>Savings Tracker</h2>
-            <input type="number" id="income" placeholder="Enter your income in Rupees">
-            <input type="number" id="savings" placeholder="Enter your savings goal in Rupees">
-            <button onclick="trackSavings()">Track Savings</button>
-            <p id="savingsOutput"></p>
-            <img src="money-sticker.png" alt="Money Sticker" class="money-sticker">
-        </div>
+    <div class="card">
+    <button type="button" onclick="location.href='investmentt.html'">
+        <i class="fa-solid fa-chart-line"></i>
+        <b>Investment Plan</b></button>
+    <p>Provide your income,savings target & get a crafted investment plan for it . </p>
     </div>
-    
-    <div class="footer">
-        <p>&copy; 2024 Le Complexx. Designed for students by students.</p>
-        <img src="money-sticker.png" alt="Money Sticker" class="money-sticker">
+    <div class="card">
+        <button type="button" onclick="location.href='savingstracker.html'">
+            <i class="fa-solid fa-bullseye"></i>
+            <b>Savings Tracker</b></button>
+    <p>Track  savings and get a prediction of amount you will save after a duration</p>
     </div>
+    <div class="card">
+        <button type="button" onclick="location.href='stocksuggestion.html'">
+            <i class="fa-solid fa-search-dollar"></i>
+            <b>Stock Suggestion</b></button>
+    <p>Get some good to buy stock suggestions based on risks(high,low,moderate)</p>
+    </div>
+    <div class="card">
+        <button type="button" onclick="location.href='riskassessment.html'">
+            <i class="fa-solid fa-wallet"></i>
+            <b>Risk Assessment</b></button>
+        <p>Answer the question and get a calculated score based on our analysis....</p>
+        </div>
+        <div class="card">
+            <button type="button" onclick="location.href='finhealth.html'">
+                <i class="fa-solid fa-heart"></i>
+                <b>Financial health</b></button>
+        <p>Answer the question and get your financial health calculated & get score</p>
+            </div>
+           
+            <div class="about"> 
+                Know more-
+                    <a href="aboutus.html"  style="color: white;">About Us</a>
+                || Important links-
+                <a href="https://www.nsdl.co.in/" class="link" style="color: white;">| Open Your Demat Account |</a><br>
+                <a href="https://youtu.be/28FMPE2tH80?si=_xXrnAPNCAxu3aY2"  style="color: white;">| Some external finance tips |</a><br>
+                <a href ="https://youtu.be/Xn7KWR9EOGQ?si=H-4nCkaaJ5pMTpOh"  style="color: white;">| Basics of Stock Market</a>
+                User Guide-
+                </div>
+    </div>
+    </div>
+</head>  
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/67377aed2480f5b4f59eaf45/1icobgd8r';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+</script>
 </body>
 </html>

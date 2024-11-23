@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Risk assessment</title>
+</head>
+<body>
+    <h1 class="glow">Risk Assessment Calculator</h1><hr>
+    <div id="riskhomebutton" class="card">
+        <button onclick="location.href='index.html'">
+            <i class="fa-solid fa-house"></i> 
+            Back to Home</button> 
+    </div>
+    <form id="riskform">
+    
+        
+            <div class="risk">
+        <p class="qstn">Are you the sole earner in the family?</p>
+       <label> <input type="radio"  name="soleEarner" value="yes">Yes</label><br>
+       <label> <input type="radio"  name="soleEarner" value="no">No</label>
+        
+        
+    </div>
+
+    <div  class="risk">
+        <p class="qstn">Are you a student?</p>
+       <label> <input type="radio"  name="student" value="yes">Yes</label><br>
+        <label><input type="radio"  name="student" value="no">No</label>
+     </div>
+
+
+    </div>
+    <div class="risk" id="studentLoansQuestion">
+            <p class="qstn">Do you have any student loan?</p>
+            
+            <label><input type="radio" name="studentLoan" value="yes">Yes</label><br>
+            <label><input type="radio" name="studentLoan" value="no">No</label>
+    
+    </div>
+    <div class="risk">
+        <p class="qstn">Enter your age(18-70)</p>
+        <input type="number" name="age" min="18" max="70" required>
+    </div>
+    <div class="risk">
+        <p class="qstn">Do you have any big loans(home or vehicle loans)?</p>
+        <label><input type="radio"  name="bigLoans" value="yes">Yes</label>
+        <label><input type="radio"  name="bigLoans" value="no">No</label>
+    </div>
+    <div class="risk">
+        <p class="qstn">Do you save/invest 20% of your salary?</p>
+        <label><input type="radio" name="lowSavings" value="yes">Yes</label>
+        <label><input type="radio" name="lowSavings" value="no">No</label>
+    </div>
+
+    <div class="risk">
+        <p class="qstn">Do you have stable income(less than 10% variation)?</p>
+        <label><input type="radio" name="stableIncome" value="yes">Yes</label>
+        <label><input type="radio" name="stableIncome" value="no">No</label>
+    </div>
+
+    <div class="risk">
+        <p class="qstn">On a scale of 1-10 how likely are you to panic over losses?</p>
+        <input type="number"  name="panicLevel" min="1" max="10" required>
+    </div>
+
+    <div class="risk">
+         <p class="qstn">Do you have 3 or more months salary saved up?</p>
+        <label><input type="radio"  name="savings" value="yes">Yes</label>
+        <label><input type="radio"  name="savings" value="no">No</label>
+    </div>
+    <div class="risk">
+        <p class="qstn">Do you have more than one stream of income?</p>
+        <label><input type="radio" name="multipleIncome" value="yes">Yes</label>
+        <label><input type="radio" name="multipleIncome" value="no">No</label>
+       
+    </div>
+    <div class="risk">
+        <p class="qstn">How many people are fully/partially dependent on you financially?</p>
+        <input type="number" name="dependents" min="0" required>
+</div>
+    <div id="calculate2">
+        <div class="cardxx">
+        <button type="button" onclick="calculateRisk()" id="calculate">
+          <i class="fa-solid fa-calculator"></i>
+          Calculate</button><br><br><br>
+  </div>
+</div>
+    </form>
+    <div class="cardop">
+    <div id="scoreOutput"></div><br>
+    </div>
+    <div class="cardop">
+    <div id="suggestionOutput"></div><br>
+    </div>
+    <script>
+        function calculateRisk() {
+            let total = 100;
+            const form = document.forms["riskform"];
+            console.log('form values',form);
+
+            if (form["soleEarner"].value === "yes") total -= 10;
+
+            if (form["student"].value === "yes") {
+                total -= 5; 
+                if (form["studentLoan"].value === "yes") total -= 10; 
+                else total -= 5;  
+            }
+
+            const age = parseInt(form["age"].value);
+            if (age > 25 && age <= 35) total -= 2;
+            else if (age > 35 && age <= 45) total -= 5;
+            else if (age > 45 && age <= 55) total -= 7;
+            else if (age > 55) total -= 10;
+
+            if (form["bigLoans"].value === "yes") total -= 5;
+
+            if (form["lowSavings"].value === "yes") total -= 5;
+
+            if (form["stableIncome"].value === "no") total -= 15;
+
+            total -= parseInt(form["panicLevel"].value);
+
+            if (form["savings"].value === "no") total -= 10;
+
+            if (form["multipleIncome"].value === "no") total -= 10;
+
+            const dependents = parseInt(form["dependents"].value);
+            if (dependents > 0 && dependents < 3) total -= 5;
+            else if (dependents >= 3 && dependents <= 5) total -= 10;
+            else if (dependents > 5) total -= 15;
+
+            document.getElementById("scoreOutput").textContent = `Score: ${total}`;
+            let suggestion = "";
+            if (total >= 80) suggestion = "Your score is too good you can invest in NFT, Crypto, Small and mid cap stocks";
+            else if (total >= 60) suggestion = " Your score is average enough you can invest in Mid and large cap stocks, small and mid cap mutual funds";
+            else if (total >= 40) suggestion = " Your score is little low try investing Mid and large cap mutual funds, SGB, real estate";
+            else suggestion = " your score is too low try investing in FD, Large cap mutual funds, Physical/Digital gold for improvement";
+
+            document.getElementById("suggestionOutput").textContent = `Suggestion: ${suggestion}`;
+        }
+    </script>
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/67377aed2480f5b4f59eaf45/1icobgd8r';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+</body>
+</html>

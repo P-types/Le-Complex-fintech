@@ -1,0 +1,316 @@
+ body{
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle at center, #aa2085, #000000 93%, #000000 100%);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+ }
+    .glow {
+        color: #ffffff; 
+        font-size: 2rem;
+        text-align: center; 
+        margin: 20px 0;
+    }
+div{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    height: 100px;
+    margin-top: 100px;
+}
+.about{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 20px;
+    border-radius:10px ;
+    box-shadow: 0 4px 6px rgb(0,0,0,0.1);
+    background-color: rgb(223, 74, 236);
+    color: black;
+
+}
+.card p{
+    font-size:x-large;
+    color:black;
+}
+
+.second{
+    color:#c7c2c2;
+    text-align: center;
+    font-size: 15px;
+}
+.card button{
+    background-color:#db09db; 
+    color:rgb(8, 5, 5);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size:16px;
+    text-decoration:none;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 50px;
+}
+button:hover{
+    background-color: #b4078f;  
+    border-color: #cc0679;  
+}
+button:active{
+    background-color: white;
+    color: black;
+}
+#homebutton{
+    position:absolute;
+    bottom: -400px;
+    left: 600px;
+    height: 50px;
+}
+#investhomebutton1{
+    position:absolute;
+    bottom: -900px;
+    left: 550px;
+    height: 50px;
+
+}
+#investhomebutton{
+    position:absolute;
+    bottom: -600px;
+    left: 550px;
+    height: 50px;
+
+}
+#savinghomebutton{
+    position: absolute;
+    bottom: -900px;
+    left: 560px;
+    height: 50px;
+}
+#riskhomebutton{
+    position: absolute;
+    bottom: -2390px;
+    left:560px;
+    height:50px;
+
+}
+#abc{
+    color: white;
+    font-size: large;
+    text-align: center;
+    position:fixed;
+    left:250px;
+    top: 130px;
+
+}
+#amount{
+    color: white;
+    font-size: large;
+    text-align: center;
+    position:fixed;
+    right:220px;
+    top:130px;
+}
+#duration{
+    color: white;
+    font-size: large;
+    text-align: center;
+    position:fixed;
+    right:550px;
+    top:130px;
+}
+
+#myform{
+    align-self:center;
+
+}
+.Income{
+    display: flex;
+    flex-direction:row;
+    height: 30px;
+justify-content: space-evenly;   
+    color:darkolivegreen;
+    font-size: x-large;
+}
+.container{
+display: flex;
+flex-direction: row;
+height: 250px;
+justify-content: space-evenly;
+color:white;
+}
+#calculate{
+    position:relative;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center; 
+    margin-top:30px;
+    width: 100%;
+}
+#calculate2{
+    position: relative;
+    margin-left: 40px;
+    margin-right: 50px;
+    margin-top:90px;
+    margin-bottom: 75pxpx;
+    
+}
+#result
+{
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 800px;
+}
+.result{
+    color: white;
+    font-size: 20px;
+    margin-top:-80px ;
+    margin-right: 200px;
+}
+.savingl
+{  
+    height: 70px;
+    font-size:28px;
+    color: black;
+}
+.risk{
+    color:white;
+    font-size: x-large;
+}
+#option
+{
+    display: flex;
+    flex-direction:column;
+    justify-content:  space-between;
+    color:white;
+    font-size: x-large;
+}
+#income input label{
+    padding:0px;
+    font-size: 32px;
+    width: 100%;
+    max-width: 300px;
+    margin:0px;
+    border-radius: 8px;
+    border:1px solid #ccc;
+
+}
+#saveamt input label{
+    padding:0px;
+    font-size: 32px;
+    max-width: fit-content;
+    margin:0px;
+    border-radius: 8px;
+    border:1px solid #ccc;
+}
+#allocate{
+  
+  margin-left: 550px;
+  margin-top: 50px;  
+}
+#color{
+    color:black;
+}
+.hidden{
+    display: none;
+}
+
+input[type=number]{
+    height:40px
+}
+.card{
+    background: radial-gradient(circle at center, #aa2085);
+    border:1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+
+}
+.cardxx button{
+    background-color:#db09db; 
+    color:rgb(8, 5, 5);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size:16px;
+    text-decoration:none;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 50px;
+}
+.qstn{
+    color:white;
+    font-size: 25px;
+    text-align: left;
+}
+#about{
+    font-size: larger;
+
+}
+#investmentChart {
+    margin-left: auto; 
+    margin-right: 485px;
+    display: block;
+}
+#cal3{
+    margin-top: -30px;
+}
+#investbreak{
+    margin-top: 100px;
+}
+#savingsChart{
+    margin-left: auto; 
+    margin-right: 400px;
+    display: block;
+}
+.radio-inline {
+    display: flex;
+    align-items: center;
+}
+.question {     /*this is for fin health*/
+    margin: 20px 0;
+}
+.question p {
+    font-weight: bold;
+}
+.question label {
+    margin-right: 20px;
+}
+.question input[type="radio"] {
+    margin-right: 5px;
+}
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+}
+.cardop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #4e014e;
+    font-size: x-large;
+}
+.budget
+{
+ padding: 60px;
+
+}
+
+
+
+
+
+    
+
+
+
